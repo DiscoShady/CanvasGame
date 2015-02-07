@@ -69,6 +69,11 @@ var update = function (modifier) {
 		++monstersCaught;
 		reset();
 	}
+	
+	if (hero.x < 0) hero.x = 0;
+	if (hero.y < 0) hero.y = 0;
+	if (hero.x > canvas.width - 32) hero.x = canvas.width - 32;
+	if (hero.y > canvas.height - 32) hero.y = canvas.height - 32;
 };
 
 var render = function () {
